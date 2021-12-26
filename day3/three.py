@@ -1,7 +1,7 @@
 
 
 
-with open("data2.txt", "r") as txt_file:
+with open("C:\\Users\heber\Desktop\Advent_of_Code_2021\day3\data2.txt", "r") as txt_file:
   data = txt_file.read().splitlines()
 
 
@@ -31,14 +31,16 @@ Npos10 =0
 Npos11 =0
 Npos12 =0
 
-
+oxygen_generator_rating_common = []
+oxygen_generator_rating_Non_common = []
 for i in data:
    
     if i[0] == '1':
         pos1 += 1
+        oxygen_generator_rating_common.append(i)
     else:
         Npos1 += 1
-
+        oxygen_generator_rating_Non_common.append(i)
     if i[1] == '1':
         pos2 += 1
     else:
@@ -198,3 +200,4 @@ common = ''.join(common)
 
 print(int(common,2)* int(uncommon,2))
     
+print(Npos12)
